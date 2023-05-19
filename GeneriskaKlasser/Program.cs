@@ -39,16 +39,19 @@ d8'   .8P 88 88.  .88      88   88.  .88 88       88    88 88 88    88 88.  .88
         Console.ReadKey();
     }
 
+    // Inmatning av spelarnamn
     static void EnqueuePlayers()
     {
         Console.WriteLine("Ange spelarnas namn (tryck enter för att avsluta):");
         while (true)
         {
+            // lägger till angivet spelarnamn i en kö
             string playerName = Console.ReadLine();
             if (string.IsNullOrEmpty(playerName))
                 break;
 
             playerQueue.Enqueue(playerName);
+            //
         }
     }
 
